@@ -1,3 +1,7 @@
+<?php
+require_once 'bootstrap.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +13,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title><?= $website_settings['website_title'] ?></title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -42,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+                <a class="navbar-brand" href="index.html"><?= $website_settings['home']; ?></a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,7 +73,7 @@
                                 <a href="portfolio-3-col.html">3 Column Portfolio</a>
                             </li>
                             <li class="active">
-                                <a href="portfolio-4-col.php">4 Column Portfolio</a>
+                                <a href="portfolio-4-col.php"><?=$website_settings['page_title'];?></a>
                             </li>
                             <li>
                                 <a href="portfolio-item.html">Single Portfolio Item</a>
@@ -123,13 +127,13 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Four Column Portfolio
-                    <small>Subheading</small>
+                <h1 class="page-header"><?=$website_settings['page_title'];?>
+                    <small><?=$website_settings['page_title'];?></small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.html">Home</a>
                     </li>
-                    <li class="active">Four Column Portfolio</li>
+                    <li class="active"><?=$website_settings['page_title'];?></li>
                 </ol>
             </div>
         </div>
@@ -165,69 +169,22 @@
 		        ],
 	        ];
 
-	        foreach ( $portfolio as $portfolio_item ) {
-		        ?>
-		        <div class="<?= $portfolio_item['container_class']; ?>">
-			        <a href="<?= $portfolio_item['img_link']; ?>">
-				        <img class="<?= $portfolio_item['img_class']; ?>" src="<?= $portfolio_item['img_link']; ?>" alt="">
-			        </a>
-		        </div>
-	            <?php
-	        }
-
+            for($i = 0; $i <3; $i++) {
+                foreach ($portfolio as $portfolio_item) {
+                    ?>
+                    <div class="<?= $portfolio_item['container_class']; ?>">
+                        <a href="<?= $portfolio_item['img_link']; ?>">
+                            <img class="<?= $portfolio_item['img_class']; ?>" src="<?= $portfolio_item['img_link']; ?>"
+                                 alt="">
+                        </a>
+                    </div>
+                <?php
+                }
+            }
 	        ?>
         </div>
         <!-- /.row -->
 
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-3 img-portfolio">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-hover" src="http://placehold.it/750x450" alt="">
-                </a>
-            </div>
-        </div>
-        <!-- /.row -->
 
         <hr>
 
@@ -267,7 +224,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2015</p>
+                    <p><?=sprintf($website_settings['copyright'], date(Y));?></p>
                 </div>
             </div>
         </footer>
