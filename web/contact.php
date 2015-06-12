@@ -1,7 +1,3 @@
-<?php
-require_once 'bootstrap.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +9,7 @@ require_once 'bootstrap.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $website_settings['website_title'] ?></title>
+    <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +42,7 @@ require_once 'bootstrap.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><?= $website_settings['home']; ?></a>
+                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -57,10 +53,10 @@ require_once 'bootstrap.php';
                     <li>
                         <a href="services.php">Services</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="contact.php">Contact</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
@@ -72,8 +68,8 @@ require_once 'bootstrap.php';
                             <li>
                                 <a href="portfolio-3-col.php">3 Column Portfolio</a>
                             </li>
-                            <li class="active">
-                                <a href="portfolio-4-col.php"><?=$website_settings['page_title'];?></a>
+                            <li>
+                                <a href="portfolio-4-col.php">4 Column Portfolio</a>
                             </li>
                             <li>
                                 <a href="portfolio-item.php">Single Portfolio Item</a>
@@ -127,94 +123,93 @@ require_once 'bootstrap.php';
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><?=$website_settings['page_title'];?>
-                    <small><?=$website_settings['page_title'];?></small>
+                <h1 class="page-header">Contact
+                    <small>Subheading</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.php">Home</a>
                     </li>
-                    <li class="active"><?=$website_settings['page_title'];?></li>
+                    <li class="active">Contact</li>
                 </ol>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Projects Row -->
+        <!-- Content Row -->
         <div class="row">
-	        <?php
-	        $portfolio = [
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-	        ];
-
-            for($i = 0; $i <3; $i++) {
-                foreach ($portfolio as $portfolio_item) {
-                    ?>
-                    <div class="<?= $portfolio_item['container_class']; ?>">
-                        <a href="<?= $portfolio_item['img_link']; ?>">
-                            <img class="<?= $portfolio_item['img_class']; ?>" src="<?= $portfolio_item['img_link']; ?>"
-                                 alt="">
-                        </a>
-                    </div>
-                <?php
-                }
-            }
-	        ?>
-        </div>
-        <!-- /.row -->
-
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
+            <!-- Map Column -->
+            <div class="col-md-8">
+                <!-- Embedded Google Map -->
+                <iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+            </div>
+            <!-- Contact Details Column -->
+            <div class="col-md-4">
+                <h3>Contact Details</h3>
+                <p>
+                    3481 Melrose Place<br>Beverly Hills, CA 90210<br>
+                </p>
+                <p><i class="fa fa-phone"></i>
+                    <abbr title="Phone">P</abbr>: (123) 456-7890</p>
+                <p><i class="fa fa-envelope-o"></i>
+                    <abbr title="Email">E</abbr>: <a href="mailto:name@example.com">name@example.com</a>
+                </p>
+                <p><i class="fa fa-clock-o"></i>
+                    <abbr title="Hours">H</abbr>: Monday - Friday: 9:00 AM to 5:00 PM</p>
+                <ul class="list-unstyled list-inline list-social-icons">
                     <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
+                        <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
                     </li>
                     <li>
-                        <a href="#">2</a>
+                        <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
                     </li>
                     <li>
-                        <a href="#">3</a>
+                        <a href="#"><i class="fa fa-twitter-square fa-2x"></i></a>
                     </li>
                     <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
+                        <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
                     </li>
                 </ul>
             </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row">
+            <div class="col-md-8">
+                <h3>Send us a Message</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Full Name:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Phone Number:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email Address:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Message:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+
         </div>
         <!-- /.row -->
 
@@ -224,7 +219,7 @@ require_once 'bootstrap.php';
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p><?=sprintf($website_settings['copyright'], date(Y));?></p>
+                    <p>Copyright &copy; Your Website 2015</p>
                 </div>
             </div>
         </footer>
@@ -237,6 +232,11 @@ require_once 'bootstrap.php';
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
 
 </body>
 

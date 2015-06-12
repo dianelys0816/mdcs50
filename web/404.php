@@ -1,7 +1,3 @@
-<?php
-require_once 'bootstrap.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +9,7 @@ require_once 'bootstrap.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $website_settings['website_title'] ?></title>
+    <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +42,7 @@ require_once 'bootstrap.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><?= $website_settings['home']; ?></a>
+                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -60,7 +56,7 @@ require_once 'bootstrap.php';
                     <li>
                         <a href="contact.php">Contact</a>
                     </li>
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
@@ -72,8 +68,8 @@ require_once 'bootstrap.php';
                             <li>
                                 <a href="portfolio-3-col.php">3 Column Portfolio</a>
                             </li>
-                            <li class="active">
-                                <a href="portfolio-4-col.php"><?=$website_settings['page_title'];?></a>
+                            <li>
+                                <a href="portfolio-4-col.php">4 Column Portfolio</a>
                             </li>
                             <li>
                                 <a href="portfolio-item.php">Single Portfolio Item</a>
@@ -94,7 +90,7 @@ require_once 'bootstrap.php';
                             </li>
                         </ul>
                     </li>
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
@@ -106,7 +102,7 @@ require_once 'bootstrap.php';
                             <li>
                                 <a href="faq.php">FAQ</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="404.php">404</a>
                             </li>
                             <li>
@@ -127,96 +123,94 @@ require_once 'bootstrap.php';
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><?=$website_settings['page_title'];?>
-                    <small><?=$website_settings['page_title'];?></small>
+                <h1 class="page-header">404
+                    <small>Page Not Found</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.php">Home</a>
                     </li>
-                    <li class="active"><?=$website_settings['page_title'];?></li>
+                    <li class="active">404</li>
                 </ol>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Projects Row -->
         <div class="row">
-	        <?php
-	        $portfolio = [
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-	        ];
 
-            for($i = 0; $i <3; $i++) {
-                foreach ($portfolio as $portfolio_item) {
-                    ?>
-                    <div class="<?= $portfolio_item['container_class']; ?>">
-                        <a href="<?= $portfolio_item['img_link']; ?>">
-                            <img class="<?= $portfolio_item['img_class']; ?>" src="<?= $portfolio_item['img_link']; ?>"
-                                 alt="">
-                        </a>
-                    </div>
-                <?php
-                }
-            }
-	        ?>
-        </div>
-        <!-- /.row -->
-
-
-        <hr>
-
-        <!-- Pagination -->
-        <div class="row text-center">
             <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
+                <div class="jumbotron">
+                    <h1><span class="error-404">404</span>
+                    </h1>
+                    <p>The page you're looking for could not be found. Here are some helpful links to get you back on track:</p>
+                    <ul>
+                        <li>
+                            <a href="index.php">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.php">About</a>
+                        </li>
+                        <li>
+                            <a href="services.php">Services</a>
+                        </li>
+                        <li>
+                            <a href="contact.php">Contact</a>
+                        </li>
+                        <li>
+                            Portfolio
+                            <ul>
+                                <li>
+                                    <a href="portfolio-1-col.php">1 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-2-col.php">2 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-3-col.php">3 Column Portfolio</a>
+                                </li>
+                                <li>
+                                    <a href="portfolio-4-col.php">4 Column Portfolio</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Blog
+                            <ul>
+                                <li>
+                                    <a href="blog-home-1.php">Blog Home 1</a>
+                                </li>
+                                <li>
+                                    <a href="blog-home-2.php">Blog Home 2</a>
+                                </li>
+                                <li>
+                                    <a href="blog-post.php">Blog Post</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Other Pages
+                            <ul>
+                                <li>
+                                    <a href="full-width-page.html">Full Width Page</a>
+                                </li>
+                                <li>
+                                    <a href="sidebar.php">Sidebar Page</a>
+                                </li>
+                                <li>
+                                    <a href="faq.php">FAQ</a>
+                                </li>
+                                <li>
+                                    <a href="404.php">404 Page</a>
+                                </li>
+                                <li>
+                                    <a href="pricing-table.html">Pricing Table</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </div>
+
         </div>
-        <!-- /.row -->
 
         <hr>
 
@@ -224,7 +218,7 @@ require_once 'bootstrap.php';
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p><?=sprintf($website_settings['copyright'], date(Y));?></p>
+                    <p>Copyright &copy; Your Website 2015</p>
                 </div>
             </div>
         </footer>

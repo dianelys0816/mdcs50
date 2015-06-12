@@ -1,7 +1,3 @@
-<?php
-require_once 'bootstrap.php';
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +9,7 @@ require_once 'bootstrap.php';
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title><?= $website_settings['website_title'] ?></title>
+    <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +42,7 @@ require_once 'bootstrap.php';
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.php"><?= $website_settings['home']; ?></a>
+                <a class="navbar-brand" href="index.php">Start Bootstrap</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -69,11 +65,11 @@ require_once 'bootstrap.php';
                             <li>
                                 <a href="portfolio-2-col.php">2 Column Portfolio</a>
                             </li>
-                            <li>
+                            <li class="active">
                                 <a href="portfolio-3-col.php">3 Column Portfolio</a>
                             </li>
-                            <li class="active">
-                                <a href="portfolio-4-col.php"><?=$website_settings['page_title'];?></a>
+                            <li>
+                                <a href="portfolio-4-col.php">4 Column Portfolio</a>
                             </li>
                             <li>
                                 <a href="portfolio-item.php">Single Portfolio Item</a>
@@ -127,13 +123,13 @@ require_once 'bootstrap.php';
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><?=$website_settings['page_title'];?>
-                    <small><?=$website_settings['page_title'];?></small>
+                <h1 class="page-header">Three Column Portfolio
+                    <small>Subheading</small>
                 </h1>
                 <ol class="breadcrumb">
                     <li><a href="index.php">Home</a>
                     </li>
-                    <li class="active"><?=$website_settings['page_title'];?></li>
+                    <li class="active">Three Column Portfolio</li>
                 </ol>
             </div>
         </div>
@@ -141,50 +137,98 @@ require_once 'bootstrap.php';
 
         <!-- Projects Row -->
         <div class="row">
-	        <?php
-	        $portfolio = [
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-		        [
-			        'container_class' => 'col-md-3 img-portfolio',
-			        'img_class' => 'img-responsive img-hover',
-			        'portfolio_link' => 'portfolio-item.php',
-			        'img_link' => 'http://lorempixel.com/g/750/450',
-		        ],
-	        ];
-
-            for($i = 0; $i <3; $i++) {
-                foreach ($portfolio as $portfolio_item) {
-                    ?>
-                    <div class="<?= $portfolio_item['container_class']; ?>">
-                        <a href="<?= $portfolio_item['img_link']; ?>">
-                            <img class="<?= $portfolio_item['img_class']; ?>" src="<?= $portfolio_item['img_link']; ?>"
-                                 alt="">
-                        </a>
-                    </div>
-                <?php
-                }
-            }
-	        ?>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
         </div>
         <!-- /.row -->
 
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+        </div>
+
+        <!-- Projects Row -->
+        <div class="row">
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+            <div class="col-md-4 img-portfolio">
+                <a href="portfolio-item.php">
+                    <img class="img-responsive img-hover" src="http://placehold.it/700x400" alt="">
+                </a>
+                <h3>
+                    <a href="portfolio-item.php">Project Name</a>
+                </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+            </div>
+        </div>
+        <!-- /.row -->
 
         <hr>
 
@@ -224,7 +268,7 @@ require_once 'bootstrap.php';
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p><?=sprintf($website_settings['copyright'], date(Y));?></p>
+                    <p>Copyright &copy; Your Website 2015</p>
                 </div>
             </div>
         </footer>
