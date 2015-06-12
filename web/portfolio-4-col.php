@@ -1,6 +1,4 @@
-<?php
-require_once 'bootstrap.php';
-?>
+<?php require_once 'bootstrap.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
