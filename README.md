@@ -9,7 +9,7 @@
 # Installation
 
 ```
-git clone https://github.com/ptahdunbar/mdcs50.git mdcs50.dev
+git clone https://github.com/dianelys0816/mdcs50.git mdcs50.dev
 cd mdcs50.dev
 vagrant up
 ```
