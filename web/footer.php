@@ -14,7 +14,7 @@
 </div>
 <!-- /.container -->
 
-<!-- jQuery -->
+<!-- jQuer -->
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -26,6 +26,16 @@
         interval: 5000 //changes the speed
     })
 </script>
+
+<?php if('/contact.php' == get_current_page()):
+
+?>
+<!-- Contact Form JavaScript -->
+<!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+<!--<script src="js/jqBootstrapValidation.js"></script>-->
+<!--<script src="js/contact_me.js"></script>-->
+
+<?php endif; ?>
 
 </body>
 

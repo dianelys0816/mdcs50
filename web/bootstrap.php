@@ -1,10 +1,14 @@
 <?php
+require_once 'functions.php';
+require_once 'database.php';
+
+//$config = require_once '../config.php';
 
 $website_settings =[
-    'website_title' => 'DJ',
+    'website_title' => 'Pole Time',
     'page_title' => 'Inverts',
     'copyright' => 'Copyright &copy; DJ %s',
-    'home' => 'DJ'
+    'home' => 'Pole Time'
 ];
 
 $portfolio = [
@@ -32,21 +36,4 @@ $portfolio = [
         'portfolio_link' => 'portfolio-item.php',
         'img_link' => 'http://lorempixel.com/g/750/450',
     ],
-];
-
-$home_carousel = [];
-
-$about_carousel = [
-    [
-        'img_url' => 'http://placehold.it/1900x1080&text=Slide One',
-        'caption' => 'Caption 1',
-    ],
-    [
-        'img_url' => 'http://placehold.it/1900x1080&text=Slide Two',
-        'caption' => 'Caption 2',
-    ],
-    [
-        'img_url' => 'http://placehold.it/1900x1080&text=Slide Three',
-        'caption' => 'Caption 3',
-    ]
 ];
