@@ -1,6 +1,4 @@
-<?php require_once 'bootstrap.php';
-require_once 'header.php';?>
-
+<?php require_once 'header.php'; ?>
     <!-- Page Content -->
     <div class="container">
 
@@ -140,5 +138,5 @@ require_once 'header.php';?>
         </div>
         <!-- /.row -->
 
-        <hr>
- <?php require_once'footer.php';?>
+<?php require_once 'footer.php'; ?>
+

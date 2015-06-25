@@ -1,20 +1,20 @@
-<?php require_once 'bootstrap.php';?>
-
+<?php require_once 'bootstrap.php'; ?>
 <hr>
 
 <!-- Footer -->
 <footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p><?=sprintf($website_settings['copyright'], date(Y));?></p>
-        </div>
-    </div>
+	<div class="row">
+		<div class="col-lg-12">
+			<p><?= sprintf($website_settings['copyright'], date('Y')); ?></p>
+		</div>
+	</div>
 </footer>
 
 </div>
 <!-- /.container -->
 
-<!-- jQuer -->
+<!-- jQuery -->
+
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
@@ -22,18 +22,16 @@
 
 <!-- Script to Activate the Carousel -->
 <script>
-    $('#myCarousel').carousel({
-        interval: 5000 //changes the speed
-    })
+	jQuery('.carousel').carousel({
+		interval: 5000 //changes the speed
+	})
 </script>
 
-<?php if('/contact.php' == get_current_page()):
-
-?>
-<!-- Contact Form JavaScript -->
-<!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
-<!--<script src="js/jqBootstrapValidation.js"></script>-->
-<!--<script src="js/contact_me.js"></script>-->
+<?php if ( '/contact.php' == getCurrentPage() ) : ?>
+	<!-- Contact Form JavaScript -->
+	<!-- Do not edit these files! In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+<!--	<script src="js/jqBootstrapValidation.js"></script>-->
+<!--	<script src="js/contact_me.js"></script>-->
 
 <?php endif; ?>
 

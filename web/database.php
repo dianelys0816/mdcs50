@@ -1,52 +1,22 @@
 <?php
 
-function query(/* $sql [, ... ] */)
-{
-    // SQL statement
-    $sql = func_get_arg(0);
+try {
 
-    // parameters, if any
-    $parameters = array_slice(func_get_args(), 1);
+	$db = new PDO(
+		sprintf(
+			'mysql:host=%s;dbname=%s',
+			$config['db']['host'],
+			$config['db']['name']
+		),
+		$config['db']['user'],
+		$config['db']['password']
+	);
 
-    // try to connect to database
-    static $handle;
-    if (!isset($handle))
-    {
-        try
-        {
-            // connect to database
-            $handle = new PDO("mysql:dbname=" . mdcs50 . ";host=" . mdcs50, root, root);
+	$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            // ensure that PDO::prepare returns false when passed invalid SQL
-            $handle->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-        }
-        catch (Exception $e)
-        {
-            // trigger (big, orange) error
-            trigger_error($e->getMessage(), E_USER_ERROR);
-            exit;
-        }
-    }
+} catch(PDOException $e) {
+	echo $e->getMessage();
+	die;
+}
 
-    // prepare SQL statement
-    $statement = $handle->prepare($sql);
-    if ($statement === false)
-    {
-        // trigger (big, orange) error
-        trigger_error($handle->errorInfo()[2], E_USER_ERROR);
-        exit;
-    }
-
-    // execute SQL statement
-    $results = $statement->execute($parameters);
-
-    // return result set's rows, if any
-    if ($results !== false)
-    {
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
-    }
-    else
-    {
-        return false;
-    }
-};
+return $db;

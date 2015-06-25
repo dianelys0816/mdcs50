@@ -1,4 +1,4 @@
-<?php require_once 'header.php';?>
+<?php require_once 'header.php'; ?>
     <!-- Page Content -->
     <div class="container">
 
@@ -144,5 +144,5 @@
         </div>
         <!-- /.row -->
 
-        <hr>
-<?php require_once'footer.php';?>
+<?php require_once 'footer.php'; ?>
+

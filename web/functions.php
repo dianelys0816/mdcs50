@@ -1,60 +1,66 @@
 <?php
-require_once 'bootstrap.php';
 
-function get_current_page ($current = null){
+function clean_input($data)
+{
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
 
-    if(is_null($current))
-    {
-        $current = $_SERVER['REQUEST_URI'];
-    }
-    if ($current == '/'){
-        $current = '/index.php';
-    };
-    return $current;
+	return $data;
 }
 
-function getCarousel ($id = null){
-    $carousel = [
+function getSetting($key)
+{
+	global $website_settings;
 
-        '/about.php' => [
-            [
-                'img_url' => 'http://placehold.it/1900x1080&text=Slide One',
-                'caption' => 'DJ',
-            ],
-            [
-                'img_url' => 'http://placehold.it/1900x1080&text=Slide Two',
-                'caption' => 'is',
-            ],
-            [
-                'img_url' => 'http://placehold.it/1900x1080&text=Slide Three',
-                'caption' => 'Awesome!',
-            ],
-        ],
+	if ( ! isset($website_settings[$key]) ) {
+		return null;
+	}
 
-        '/index.php' => [
-            [
-                'img_url' => 'http://10.10.10.100/imgs/rsz_2013-12-11_223447.jpg',
-                'caption' => 'Caption 1',
-            ],
-            [
-                'img_url' => 'http://10.10.10.100/imgs/rsz_indexone.jpg',
-                'caption' => 'Caption 2',
-            ],
-            [
-                'img_url' => 'http://10.10.10.100/imgs/rsz_up.jpg',
-                'caption' => 'Caption 3',
-            ],
-        ],
-    ];
+	return $website_settings[$key];
+}
 
-    if (! $id)
-    {
-        return [];
-    }
+/**
+ * Get's the current page. Defaults to $_SERVER['REQUEST_URI'].
+ *
+ * @return string
+ */
+function getCurrentPage()
+{
+	$get_request = function($current = null){
+		if ( is_null($current) ) {
+			$current = $_SERVER['REQUEST_URI'];
+		}
 
-   if (!isset($carousel[$id]))
-    {
-        return [];
-    }
-      return $carousel[$id];
-};
+		if ( '/' == $current ) {
+			$current = '/index.php';
+		}
+
+		return $current;
+	};
+
+	$current = $get_request();
+
+	return $current;
+}
+
+/**
+ * Get's a carousel by the ID.
+ *
+ * @param string $id
+ * @return array
+ */
+function getCarousel($id = null)
+{
+	global $carousels;
+
+	if ( ! $id ) {
+		return [];
+	}
+
+	if ( ! isset($carousels[$id]) ) {
+		return [];
+	}
+
+	return $carousels[$id];
+}
