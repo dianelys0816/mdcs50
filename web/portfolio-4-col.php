@@ -5,7 +5,7 @@
         <!-- Page Heading/Breadcrumbs -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header"><?= $website_settings['page_title']; ?>
+                <h1 class="page-header"><?= $website_settings['title']; ?>
                     <small><?= $website_settings['page_description']; ?></small>
 
                 </h1>
@@ -33,7 +33,7 @@
 	        }
 
             for($i = 0; $i <3; $i++) {
-                foreach ($portfolio as $portfolio_item) {
+                foreach ($portfolio_collection as $portfolio_item) {
                     ?>
                     <div class="<?= $portfolio_item['container_class']; ?>">
                         <a href="<?= $portfolio_item['img_link']; ?>">

@@ -37,7 +37,7 @@
                             <a href="portfolio-3-col.php">3 Column Portfolio</a>
                         </li>
                         <li class="active">
-                            <a href="portfolio-4-col.php"><?=$website_settings['page_title'];?></a>
+                            <a href="portfolio-4-col.php"><?=$website_settings['title'];?></a>
                         </li>
                         <li>
                             <a href="portfolio-item.php">Single Portfolio Item</a>

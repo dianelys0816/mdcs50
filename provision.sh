@@ -2,7 +2,7 @@
 
 set -x
 
-#sudo apt-get update
+sudo apt-get update
 
 # base
 sudo apt-get install -y git-core

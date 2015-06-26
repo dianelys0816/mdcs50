@@ -1,4 +1,5 @@
 <?php
+
 $config = require_once '../config.php';
 $db = require_once 'database.php';
 

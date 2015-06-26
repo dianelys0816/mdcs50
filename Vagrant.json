@@ -1,6 +1,6 @@
 [
     {
-        "hostname" : "mdcs50.dev",
+        "hostname" : "dindy.dev",
 
         "synced_folders" : [
             {
@@ -13,6 +13,11 @@
                 ]
             }
         ],
+
+      "digital_ocean": {
+        "token" : "5739c619ce238d0fd258c681aa4656bba6ace06e3939195908146cb293c09ba5",
+        "private_key_path" : "~/.ssh/id_rsa"
+      },
 
         "provision" : "provision.sh"
     }
